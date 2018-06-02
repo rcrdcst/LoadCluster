@@ -1,0 +1,6 @@
+module Pods_LoadCluster {
+  umbrella header "Pods-LoadCluster-umbrella.h"
+
+  export *
+  module * { export * }
+}

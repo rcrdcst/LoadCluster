@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cluster View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ClusterViewController" id="BYZ-38-t0r" customClass="ClusterViewController" customModule="LoadCluster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GMSMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzN-eQ-qCU">
+                                <rect key="frame" x="325" y="30" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gUJ-3z-ah5"/>
+                                    <constraint firstAttribute="width" constant="30" id="oyo-t1-avA"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="refresh"/>
+                                <connections>
+                                    <action selector="refreshBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nVm-1p-QcG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TzN-eQ-qCU" secondAttribute="trailing" constant="20" id="dHw-UK-U54"/>
+                            <constraint firstItem="TzN-eQ-qCU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="k6b-Id-LfZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="8bC-Xf-vdC" id="IRZ-dL-hfU"/>
+                        <outlet property="refreshBtn" destination="TzN-eQ-qCU" id="cMT-cs-UdH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Cluster Detail View Controller-->
+        <scene sceneID="3Ph-ls-b8l">
+            <objects>
+                <viewController storyboardIdentifier="ClusterDetailViewController" id="Kko-jf-N36" customClass="ClusterDetailViewController" customModule="LoadCluster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CuO-c7-pOb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMR-tp-CiJ">
+                                <rect key="frame" x="20" y="129" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6pp-Uc-ZsT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBp-3i-oLx">
+                                <rect key="frame" x="20" y="180" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kBp-3i-oLx" firstAttribute="top" secondItem="IMR-tp-CiJ" secondAttribute="bottom" constant="30" id="0TV-Li-Etb"/>
+                            <constraint firstItem="IMR-tp-CiJ" firstAttribute="top" secondItem="zTe-MU-EbB" secondAttribute="top" constant="109" id="7EI-t1-vHg"/>
+                            <constraint firstItem="zTe-MU-EbB" firstAttribute="trailing" secondItem="IMR-tp-CiJ" secondAttribute="trailing" constant="20" id="CqY-NT-lpu"/>
+                            <constraint firstItem="kBp-3i-oLx" firstAttribute="leading" secondItem="zTe-MU-EbB" secondAttribute="leading" constant="20" id="Ny7-lA-OSQ"/>
+                            <constraint firstItem="IMR-tp-CiJ" firstAttribute="leading" secondItem="zTe-MU-EbB" secondAttribute="leading" constant="20" id="Qnu-lX-Ens"/>
+                            <constraint firstItem="zTe-MU-EbB" firstAttribute="trailing" secondItem="kBp-3i-oLx" secondAttribute="trailing" constant="20" id="Z2M-0v-MQE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zTe-MU-EbB"/>
+                    </view>
+                    <connections>
+                        <outlet property="markerDescriptionLabel" destination="kBp-3i-oLx" id="mYf-NE-3z3"/>
+                        <outlet property="markerTitleLabel" destination="IMR-tp-CiJ" id="M42-Fw-r1g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AfP-EM-OE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1433" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="refresh" width="512" height="512"/>
+    </resources>
+</document>
